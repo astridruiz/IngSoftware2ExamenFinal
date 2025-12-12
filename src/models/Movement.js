@@ -22,3 +22,21 @@ export class Movement {
     throw new Error('getTypeName() must be implemented');
   }
 }
+
+export class Fee extends Movement {
+  constructor(data) {
+    super(data);
+  }
+
+  getNetAmount() {
+    return -Math.abs(this.amount); 
+  }
+
+  getColor() {
+    return 'orange';
+  }
+
+  getIcon() {
+    return '⚠️';
+  }
+}
