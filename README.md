@@ -14,3 +14,21 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+# Examen - Refactorización
+
+## Cambios Realizados
+
+### 1. Factory Pattern
+- Moví la creación de objetos a `factory/MovementFactory.js`
+- `movementList.js` ahora usa el factory en lugar de crear objetos directamente
+
+### 2. Nuevo Tipo `fee`
+- Modifiqué `models/Movement.js` para el nuevo tipo
+- Registré `fee` en `MovementFactory.js`
+- La UI (`movementList.js`) funciona sin cambios
+
+## Ejecutar
+```bash
+npm install
+npm run dev
